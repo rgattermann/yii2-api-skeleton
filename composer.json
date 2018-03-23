@@ -1,0 +1,35 @@
+{
+    "name": "rgattermann/yii2-api-skeleton",
+    "description": "Skeleton Yii2 Api",
+    "keywords": ["yii2", "rest", "api"],
+    "authors": [
+        {
+            "name": "Rodrigo Gattermann",
+            "email": "rodrigo.gattermann@gmail.com"
+        }
+    ],
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.1",
+        "yiisoft/yii2": "~2.0.15",
+        "vlucas/phpdotenv": "~2.4"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0.13",
+        "yiisoft/yii2-gii": "~2.0"
+    },  
+    "config": {
+        "process-timeout": 1800
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php yii migrate --migrationPath=@app/migrations"
+        ]
+    }
+}
