@@ -14,9 +14,8 @@
             "App\\": "src/"
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
-        "php": ">=7.1",
         "yiisoft/yii2": "~2.0.15",
         "vlucas/phpdotenv": "~2.4"
     },
@@ -25,11 +24,30 @@
         "yiisoft/yii2-gii": "~2.0"
     },  
     "config": {
-        "process-timeout": 1800
+        "process-timeout": 1800,
+        "plataform": {
+            "php": "7.1"
+        }
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
     "scripts": {
         "post-install-cmd": [
             "php yii migrate --migrationPath=@app/migrations"
         ]
+    },
+    "extra": {
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [
+                {
+                    "runtime": "0777",
+                    "yii": "0755"
+                }
+            ]
+        }
     }
 }
