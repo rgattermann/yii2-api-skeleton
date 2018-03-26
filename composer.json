@@ -16,12 +16,14 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "yiisoft/yii2": "~2.0.15",
-        "vlucas/phpdotenv": "~2.4"
+        "yiisoft/yii2": "2.0.5",
+        "vlucas/phpdotenv": "~2.4",
+        "damirka/yii2-jwt": "v0.2.1",
+        "guzzlehttp/guzzle": "^6.3"
     },
     "require-dev": {
-        "yiisoft/yii2-debug": "~2.0.13",
-        "yiisoft/yii2-gii": "~2.0"
+        "yiisoft/yii2-debug": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0"
     },  
     "config": {
         "process-timeout": 1800,
