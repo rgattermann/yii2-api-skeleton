@@ -32,7 +32,12 @@ $config = [
         'response' => [
             'format' => \yii\web\Response::FORMAT_JSON,
         ],
-
+        'user' => [
+            'identityClass' => 'common\models\User',
+            'enableAutoLogin' => true,
+            'enableSession' => false,
+            'loginUrl' => null
+        ],
         'log' => [
             'traceLevel' => 3,
             'targets' => [

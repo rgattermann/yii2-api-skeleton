@@ -2,6 +2,7 @@
 
 namespace App\Modules\v1;
 
+use Yii;
 use yii\base\Module;
 
 class ApiModule extends Module
@@ -11,5 +12,6 @@ class ApiModule extends Module
     public function init()
     {
         parent::init();
+        Yii::$app->user->enableSession = false;
     }
 }
